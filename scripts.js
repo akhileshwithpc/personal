@@ -29,4 +29,16 @@ document.addEventListener("DOMContentLoaded", function () {
     setInterval(showSlide, 3000); // Change slide every 3 seconds
     showSlide(); // Show first slide immediately
   });
-  
+  const video = document.getElementById('myVideo');
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      video.play();
+    } else {
+      video.pause();
+    }
+  });
+}, { threshold: 0.5 });  // 50% of the video should be visible to trigger
+
+observer.observe(video);
