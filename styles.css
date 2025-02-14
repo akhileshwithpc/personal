@@ -34,8 +34,8 @@ html {
 .header h1 {
     font-size: 4.1rem;
     font-family: "Italianno", serif;
-    color: #FFc7C7;
-    padding-top: 5px;
+    color: #ffa4b0;
+    padding-top: 4px;
     animation: glow 3s infinite alternate;
 
 }
@@ -57,7 +57,7 @@ html {
 
 .letter-main p {
     margin-bottom: 5%;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     color: #f7b4b4;
     font-family: "Garamond";
     letter-spacing: 1px;
@@ -69,9 +69,10 @@ html {
     white-space: nowrap;
     animation: typing 10s;
     overflow: hidden;
+    font-weight: bold;
 }
 .animated-text-2 {
-    animation: text-appear 7s;
+    animation: text-appear 5s;
 }
 .animated-text-3 {
     animation: text-appear 10s;
@@ -154,10 +155,10 @@ html {
 .quotes-header {
     text-align: center;
     font-family: "Comfortaa";
-    font-size: 1.3em;
+    font-size: 1.2rem;
     height: 5%;
     overflow-y: hidden;
-    padding: 2rem
+    padding: 2rem 2rem 2.3rem 2rem;
 }
 
 .quotes-wrapper {
@@ -170,14 +171,14 @@ html {
     /* padding-top: 2rem; */
 }
 .quote {
-    font-size: 1.3em;
-    padding: 2rem;
+    font-size: 1.2em;
+    padding: 1.5rem;
     text-align: center;
     /* margin: 5% 0%; */
     font-family: "Garamond";
     margin: 0rem 3rem;
     flex: 1;
-    letter-spacing: 1px;
+    /* letter-spacing: 1px; */
     font-style: italic;
     border-radius: 3rem;
     background: linear-gradient(180deg, #2c0325, #000000);
@@ -188,54 +189,6 @@ html {
     visibility: hidden;
     transform: translateY(-50px);
 }
-/* .quote-1 {
-    animation: appear 3s ease-in-out forwards;
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(-50px);
-}
-.quote-2 {
-    animation: appear 6s ease-in-out forwards;
-    background: linear-gradient(180deg, #2c0325, #000000);
-    border-radius: 3rem;
-    margin: 0rem 3rem;
-    flex: 1;
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(-50px);
-}
-.quote-3 {
-    animation: appear 9s ease-in-out forwards;
-    background: linear-gradient(180deg, #2c0325, #000000);
-    border-radius: 3rem;
-    margin: 0rem 3rem;
-    flex: 1;
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(-50px);
-}
-.quote-4 {
-    animation: appear 12s ease-in-out forwards;
-    background: linear-gradient(180deg, #2c0325, #000000);
-    border-radius: 3rem;
-    margin: 0rem 3rem;
-    flex: 1;
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(-50px);
-}
-.quote-5 {
-    animation: appear 15s ease-in-out forwards;
-    background: linear-gradient(180deg, #2c0325, #000000);
-    border-radius: 3rem;
-    margin: 0rem 3rem;
-    flex: 1;
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(-50px);
-} */
-
-
 /* Starting here, I will code the End-Note Page */
 .end-note {
     height: 100vh;
@@ -281,23 +234,23 @@ html {
 .end-note-text h2 {
     padding: 1rem;
     font-family: "Comfortaa";
-    font-size: 2rem;
+    font-size: 1.8rem;
 }
 
 .end-note-text p {
     padding: 0 1rem 2.8rem 1rem;
-    font-size: 1.3rem;
+    font-size: 1.1rem;
 
 }
 
 .bucket-list h2 {
     padding: 1rem 1rem 1.8rem 1rem;
     font-family: "Comfortaa";
-    font-size: 2rem;
+    font-size: 1.8rem;
 }
 
 .bucket-list {
-    padding-bottom: 2rem;
+    padding-bottom: 1.1rem;
 }
 
 .bucket-list p {
@@ -305,7 +258,7 @@ html {
     text-align: center;
     padding: 1.2rem 1.2rem 1rem 1.2rem;
     white-space: nowrap;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
 }
 
 .bucket-line-1 {
@@ -313,7 +266,7 @@ html {
     flex-direction: row;
     justify-content: space-evenly;
     gap: 2rem;
-    padding-bottom: 1.5rem;
+    padding-bottom: 1rem;
     overflow-x: scroll;
     scrollbar-width: none;
     -ms-overflow-style: none;
@@ -328,7 +281,7 @@ html {
     flex-direction: row;
     justify-content: space-evenly;
     gap: 2rem;
-    padding-bottom: 1.5rem;
+    padding-bottom: 1rem;
     overflow-x: scroll;
     scrollbar-width: none;
     -ms-overflow-style: none;
@@ -343,7 +296,7 @@ html {
     flex-direction: row;
     justify-content: space-evenly;
     gap: 2rem;
-    padding-bottom: 1.5rem;
+    padding-bottom: 1rem;
     overflow-x: scroll;
     scrollbar-width: none;
     -ms-overflow-style: none;
@@ -358,7 +311,7 @@ html {
     flex-direction: row;
     justify-content: space-evenly;
     gap: 2rem;
-    padding-bottom: 1.5rem;
+    padding-bottom: 1rem;
     overflow-x: scroll;
     scrollbar-width: none;
     -ms-overflow-style: none;
@@ -373,7 +326,7 @@ html {
     flex-direction: row;
     justify-content: space-evenly;
     gap: 2rem;
-    padding-bottom: 1.5rem;
+    padding-bottom: 1rem;
     overflow-x: scroll;
     scrollbar-width: none;
     -ms-overflow-style: none;
@@ -384,8 +337,8 @@ html {
 }
 
 .blue-bl {
-    background-color: rgb(0, 0, 255);
-    height: 4rem;
+    background-color: rgb(0, 3, 158);
+    height: 3.8rem;
     border-radius: 2rem;
     transition: box-shadow 0.3s ease;
 }
@@ -403,8 +356,8 @@ html {
 }
 
 .pink-bl {
-    background-color: rgb(255, 0, 149);
-    height: 4rem;
+    background-color: rgb(204, 0, 61);
+    height: 3.8rem;
     border-radius: 2rem;
     transition: box-shadow 0.3s ease;
 }
@@ -422,7 +375,7 @@ html {
 }
 
 .footer {
-    height: 5rem;
+    align-content: end;
 }
 
 .footer p {
@@ -578,87 +531,32 @@ html {
     }
 }
 
-/* @keyframes bokehAnimation {
-    0% {
-        background:
-        radial-gradient(circle at 50% 10%, rgba(255, 0, 255, 0.5) 7px, rgba(0, 0, 0, 0) 70px),
-        radial-gradient(circle at 15% 20%, rgba(255, 0, 0, 0.5) 10px, rgba(0, 0, 0, 0) 100px),
-        radial-gradient(circle at 80% 30%, rgba(0, 0, 255, 0.5) 13px, rgba(0, 0, 0, 0) 130px),
-        radial-gradient(circle at 30% 40%, rgba(255, 0, 255, 0.5) 10px, rgba(0, 0, 0, 0) 100px),
-        radial-gradient(circle at 70% 50%, rgba(255, 0, 0, 0.5) 10px, rgba(0, 0, 0, 0) 100px),
-        radial-gradient(circle at 20% 60%, rgba(0, 0, 255, 0.5) 9px, rgba(0, 0, 0, 0) 90px),
-        radial-gradient(circle at 60% 68%, rgba(255, 0, 0, 0.5) 7px, rgba(0, 0, 0, 0) 70px),
-        radial-gradient(circle at 30% 82%, rgba(0, 0, 255, 0.5) 10px, rgba(0, 0, 0, 0) 100px),
-        radial-gradient(circle at 75% 85%, rgba(255, 0, 255, 0.5) 9px, rgba(0, 0, 0, 0) 90px),
-        #000;
-    }
-    33.3% {
-        background:
-            radial-gradient(circle at 20% 10%, rgba(255, 0, 255, 0.5) 7px, rgba(0, 0, 0, 0) 70px),
-            radial-gradient(circle at 65% 20%, rgba(255, 0, 0, 0.5) 10px, rgba(0, 0, 0, 0) 100px),
-            radial-gradient(circle at 50% 30%, rgba(0, 0, 255, 0.5) 13px, rgba(0, 0, 0, 0) 130px),
-            radial-gradient(circle at 80% 40%, rgba(255, 0, 255, 0.5) 10px, rgba(0, 0, 0, 0) 100px),
-            radial-gradient(circle at 35% 50%, rgba(255, 0, 0, 0.5) 10px, rgba(0, 0, 0, 0) 100px),
-            radial-gradient(circle at 50% 60%, rgba(0, 0, 255, 0.5) 9px, rgba(0, 0, 0, 0) 90px),
-            radial-gradient(circle at 90% 68%, rgba(255, 0, 0, 0.5) 7px, rgba(0, 0, 0, 0) 70px),
-            radial-gradient(circle at 10% 82%, rgba(0, 0, 255, 0.5) 10px, rgba(0, 0, 0, 0) 100px),
-            radial-gradient(circle at 65% 85%, rgba(255, 0, 255, 0.5) 9px, rgba(0, 0, 0, 0) 90px),
-            #000;
-    }
-
-    66.9% {
-        background:
-            radial-gradient(circle at 90% 10%, rgba(255, 0, 255, 0.5) 7px, rgba(0, 0, 0, 0) 70px),
-            radial-gradient(circle at 25% 20%, rgba(255, 0, 0, 0.5) 10px, rgba(0, 0, 0, 0) 100px),
-            radial-gradient(circle at 60% 30%, rgba(0, 0, 255, 0.5) 13px, rgba(0, 0, 0, 0) 130px),
-            radial-gradient(circle at 10% 40%, rgba(255, 0, 255, 0.5) 10px, rgba(0, 0, 0, 0) 100px),
-            radial-gradient(circle at 80% 50%, rgba(255, 0, 0, 0.5) 10px, rgba(0, 0, 0, 0) 100px),
-            radial-gradient(circle at 30% 60%, rgba(0, 0, 255, 0.5) 9px, rgba(0, 0, 0, 0) 90px),
-            radial-gradient(circle at 10% 68%, rgba(255, 0, 0, 0.5) 7px, rgba(0, 0, 0, 0) 70px),
-            radial-gradient(circle at 90% 82%, rgba(0, 0, 255, 0.5) 10px, rgba(0, 0, 0, 0) 100px),
-            radial-gradient(circle at 25% 85%, rgba(255, 0, 255, 0.5) 9px, rgba(0, 0, 0, 0) 90px),
-            #000;
-    }
-    100% {
-        background:
-        radial-gradient(circle at 50% 10%, rgba(255, 0, 255, 0.5) 7px, rgba(0, 0, 0, 0) 70px),
-        radial-gradient(circle at 15% 20%, rgba(255, 0, 0, 0.5) 10px, rgba(0, 0, 0, 0) 100px),
-        radial-gradient(circle at 80% 30%, rgba(0, 0, 255, 0.5) 13px, rgba(0, 0, 0, 0) 130px),
-        radial-gradient(circle at 30% 40%, rgba(255, 0, 255, 0.5) 10px, rgba(0, 0, 0, 0) 100px),
-        radial-gradient(circle at 70% 50%, rgba(255, 0, 0, 0.5) 10px, rgba(0, 0, 0, 0) 100px),
-        radial-gradient(circle at 20% 60%, rgba(0, 0, 255, 0.5) 9px, rgba(0, 0, 0, 0) 90px),
-        radial-gradient(circle at 60% 68%, rgba(255, 0, 0, 0.5) 7px, rgba(0, 0, 0, 0) 70px),
-        radial-gradient(circle at 30% 82%, rgba(0, 0, 255, 0.5) 10px, rgba(0, 0, 0, 0) 100px),
-        radial-gradient(circle at 75% 85%, rgba(255, 0, 255, 0.5) 9px, rgba(0, 0, 0, 0) 90px),
-        #000;
-    }
-} */
 @keyframes typing {
     from {
         width:0
     }
 }
-h1 {
+/* h1 {
     animation: twinkle 1.5s infinite alternate;
-    color: #FFC7C7;
-}
+    color: #ff0000;
+} */
 
 @keyframes glow {
     0% {
         opacity: 1;
-        text-shadow: 0 0 5px #FFC7C7, 0 0 10px #FFC7C7, 0 0 20px #FFC7C7, 0 0 30px #FFC7C7;
+        text-shadow: 0 0 4px #ff5c72, 0 0 8px #ff5c72, 0 0 12px #ff5c72, 0 0 16px #ff5c72;
     }
     33% {
-        opacity: 0.8;
-        text-shadow: 0 0 2px #FFC7C7, 0 0 4px #FFC7C7, 0 0 6px #FFC7C7, 0 0 8px #FFC7C7;
+        opacity: 0.6;
+        text-shadow: 0 0 1px #ff5c72, 0 0 2px #ff5c72, 0 0 3px #ff5c72, 0 0 4px #ff5c72;
     }
     66% {
         opacity: 1;
-        text-shadow: 0 0 5px #FFC7C7, 0 0 10px #FFC7C7, 0 0 20px #FFC7C7, 0 0 30px #FFC7C7;
+        text-shadow: 0 0 4px #ff5c72, 0 0 8px #ff5c72, 0 0 12px #ff5c72, 0 0 16px #ff5c72;
     }
     100% {
         opacity: 0.8;
-        text-shadow: 0 0 2px #FFC7C7, 0 0 4px #FFC7C7, 0 0 6px #FFC7C7, 0 0 8px #FFC7C7;
+        text-shadow: 0 0 1px #ff5c72, 0 0 2px #ff5c72, 0 0 3px #ff5c72, 0 0 4px #ff5c72;
     }
 }
 @keyframes bokehAnimation {
