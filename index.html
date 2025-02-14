@@ -1,850 +1,166 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    border: none;
-    outline: none;
-    box-shadow: none;
-}
-
-html {
-    font-size: 62.5%;
-    overflow-y: scroll;
-    scroll-snap-type: y mandatory;
-    -webkit-overflow-scrolling: touch;
-    scroll-behavior: smooth;
-}
-
-.letter, .quotes, .memories, .end-note {
-    scroll-snap-align: start; 
-  }
-/* The Sub Parts of the letter page */
-.letter {
-    height: 100vh;
-    background-image: url(images/letter-bg-android.jpg?);
-    background-color: black;
-    background-size: cover;
-}
-
-.header {
-    background-color: #000000;
-    text-align: center;
-}
-
-.header h1 {
-    font-size: 4.1rem;
-    font-family: "Italianno", serif;
-    color: #ffa4b0;
-    padding-top: 4px;
-    animation: glow 3s infinite alternate;
-
-}
-
-.header h6 {
-    font-family: "Satisfy", serif;
-    padding-bottom: 2.1%;
-    font-size: 1rem;
-    color: rgb(226, 158, 169);
-}
-
-.letter-main {
-    padding: 0% 8% 0% 8%;
-    margin: auto;
-    color: #000000;
-    width: fit-content;
-    display: inline-block;
-}
-
-.letter-main p {
-    margin-bottom: 5%;
-    font-size: 1.2rem;
-    color: #f7b4b4;
-    font-family: "Garamond";
-    letter-spacing: 1px;
-    overflow: hidden;
-    
-}
-.animated-text-1 {
-    width: 100%;
-    white-space: nowrap;
-    animation: typing 10s;
-    overflow: hidden;
-    font-weight: bold;
-}
-.animated-text-2 {
-    animation: text-appear 5s;
-}
-.animated-text-3 {
-    animation: text-appear 10s;
-}
-.animated-text-4 {
-    animation: text-appear 15s;
-}
-.animated-text-5 {
-    animation: text-appear 20s;
-}
-.animated-text-6 {
-    animation: text-appear 25s;
-}
-/* The above is to be formatted in the end of this code, currently wrote it to fix layout issues */
-.memories {
-    height: 100vh;
-    background-color: #000000;
-    color: #FFc7C7;
-    overflow-y: hidden;
-    margin: 0;
-    display: flex;
-    overflow-x: auto;
-    overflow-y: hidden;
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
-}
-
-.slide-container {
-    position: relative;
-    max-width: 100%;
-    /* padding: 3rem 0; */
-}
-
-.slider {
-    box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
-    border-radius: 0.5rem;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-    position: relative;
-    overflow: hidden;
-}
-
-/* Hide scrollbar for Chrome, Safari and Opera */
-.slider::-webkit-scrollbar {
-    display: none;
-}
-
-.slider img {
-    flex: 1 0 100%;
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-    scroll-behavior: smooth;
-    border: 2px #13040F;
-    overflow-y: hidden;
-    /* opacity: 0;  */
-    transition: opacity 1s ease-in-out;
-    /* position: absolute; */
-}
-
-/* From here, begins the coding of Quotes Page */
-.quotes {
-    height: 100vh;
-    background-color: #000000;
-    color: #FFc7C7;
-    background:
-        radial-gradient(circle at 50% 10%, rgba(255, 0, 255, 0.5) 7px, rgba(0, 0, 0, 0) 70px),
-        radial-gradient(circle at 15% 20%, rgba(255, 0, 0, 0.5) 10px, rgba(0, 0, 0, 0) 100px),
-        radial-gradient(circle at 80% 30%, rgba(0, 0, 255, 0.5) 13px, rgba(0, 0, 0, 0) 130px),
-        radial-gradient(circle at 30% 40%, rgba(255, 0, 255, 0.5) 10px, rgba(0, 0, 0, 0) 100px),
-        radial-gradient(circle at 70% 50%, rgba(255, 0, 0, 0.5) 10px, rgba(0, 0, 0, 0) 100px),
-        radial-gradient(circle at 20% 60%, rgba(0, 0, 255, 0.5) 9px, rgba(0, 0, 0, 0) 90px),
-        radial-gradient(circle at 60% 68%, rgba(255, 0, 0, 0.5) 7px, rgba(0, 0, 0, 0) 70px),
-        radial-gradient(circle at 30% 82%, rgba(0, 0, 255, 0.5) 10px, rgba(0, 0, 0, 0) 100px),
-        radial-gradient(circle at 75% 85%, rgba(255, 0, 255, 0.5) 9px, rgba(0, 0, 0, 0) 90px),
-        #000;
-    animation: bokehAnimation 10s infinite;
-}
-
-.quotes-header {
-    text-align: center;
-    font-family: "Comfortaa";
-    font-size: 1.2rem;
-    height: 5%;
-    overflow-y: hidden;
-    padding: 2rem 2rem 2.3rem 2rem;
-}
-
-.quotes-wrapper {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    height: 85%;
-    overflow-y: hidden;
-    padding-top: 2rem;
-    /* padding-top: 2rem; */
-}
-.quote {
-    font-size: 1.2em;
-    padding: 1.5rem;
-    text-align: center;
-    /* margin: 5% 0%; */
-    font-family: "Garamond";
-    margin: 0rem 3rem;
-    flex: 1;
-    /* letter-spacing: 1px; */
-    font-style: italic;
-    border-radius: 3rem;
-    background: linear-gradient(180deg, #2c0325, #000000);
-}
-.quote {
-    animation: appear 3s ease-in-out forwards;
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(-50px);
-}
-/* Starting here, I will code the End-Note Page */
-.end-note {
-    height: 100vh;
-    color: #FFc7C7;
-    background: linear-gradient(180deg, #000 80%, #3b0997);
-    animation: gradientLengthShift 2s ease-in-out infinite;
-    /* background-size: 100% 300%;
-  animation: gradientShift 8s ease-in-out infinite; */
-}
-
-.video-message {
-    padding: 1rem;
-    height: 25%;
-}
-
-.video-message video {
-    height: 100%;
-    width: 100%;
-    /* box-shadow: 0 100px 100px 1px #c916ff; */
-}
-
-.video-message video::-webkit-media-controls {
-    display: none !important;
-}
-
-.video-message video:hover::-webkit-media-controls {
-    display: flex !important;
-}
-
-.video-message video::-webkit-media-controls-enclosure {
-    opacity: 0;
-    transition: opacity 0.4s ease;
-}
-
-.video-message video:hover::-webkit-media-controls-enclosure {
-    opacity: 1;
-}
-
-.end-note-text {
-    width: 100%;
-}
-
-.end-note-text h2 {
-    padding: 1rem;
-    font-family: "Comfortaa";
-    font-size: 1.8rem;
-}
-
-.end-note-text p {
-    padding: 0 1rem 2.8rem 1rem;
-    font-size: 1.1rem;
-
-}
-
-.bucket-list h2 {
-    padding: 1rem 1rem 1.8rem 1rem;
-    font-family: "Comfortaa";
-    font-size: 1.8rem;
-}
-
-.bucket-list {
-    padding-bottom: 1.1rem;
-}
-
-.bucket-list p {
-    font-family: "Garamond";
-    text-align: center;
-    padding: 1.2rem 1.2rem 1rem 1.2rem;
-    white-space: nowrap;
-    font-size: 1.1rem;
-}
-
-.bucket-line-1 {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    gap: 2rem;
-    padding-bottom: 1rem;
-    overflow-x: scroll;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-}
-
-.bucket-line-1::-webkit-scrollbar {
-    display: none;
-}
-
-.bucket-line-2 {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    gap: 2rem;
-    padding-bottom: 1rem;
-    overflow-x: scroll;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-}
-
-.bucket-line-2::-webkit-scrollbar {
-    display: none;
-}
-
-.bucket-line-3 {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    gap: 2rem;
-    padding-bottom: 1rem;
-    overflow-x: scroll;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-}
-
-.bucket-line-3::-webkit-scrollbar {
-    display: none;
-}
-
-.bucket-line-4 {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    gap: 2rem;
-    padding-bottom: 1rem;
-    overflow-x: scroll;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-}
-
-.bucket-line-4::-webkit-scrollbar {
-    display: none;
-}
-
-.bucket-line-5 {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    gap: 2rem;
-    padding-bottom: 1rem;
-    overflow-x: scroll;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-}
-
-.bucket-line-5::-webkit-scrollbar {
-    display: none;
-}
-
-.blue-bl {
-    background-color: rgb(0, 3, 158);
-    height: 3.8rem;
-    border-radius: 2rem;
-    transition: box-shadow 0.3s ease;
-}
-
-.blue-bl:hover,
-.blue-bl:active,
-.blue-bl:focus-within {
-    box-shadow: 0 6px 9px rgba(101, 45, 255, 0.8);
-}
-
-@media (hover: none) {
-    .blue-bl:active {
-        box-shadow: 0 6px 9px rgba(101, 45, 255, 0.8);
-    }
-}
-
-.pink-bl {
-    background-color: rgb(204, 0, 61);
-    height: 3.8rem;
-    border-radius: 2rem;
-    transition: box-shadow 0.3s ease;
-}
-
-.pink-bl:hover,
-.pink-bl:active,
-.pink-bl:focus-within {
-    box-shadow: 0 6px 9px rgba(255, 0, 157, 0.8);
-}
-
-@media (hover: none) {
-    .pink-bl:active {
-        box-shadow: 0 6px 9px rgba(255, 0, 157, 0.8);
-    }
-}
-
-.footer {
-    align-content: end;
-}
-
-.footer p {
-    text-align: center;
-}
-
-.craft-space-top {
-    padding-top: 3rem;
-}
-
-.craft-space-bottom {
-    padding-bottom: 2rem;
-}
-
-.notice {
-    overflow-x: hidden;
-    animation: blink 1s steps(2, start) infinite;
-    color: rgb(105, 97, 97);
-}
-
-/* Now I will be making animations for the Stars */
-@keyframes appear {
-    0% {
-        opacity: 0;
-        transform: translateY(50px);
-    }
-    /* 50% {
-        opacity: 0;
-        transform: translateY(50px);
-    } */
-    100% {
-        opacity: 1;
-        transform: translateY(0px);
-    }
-}
-
-@keyframes blink {
-    0% {
-        opacity: 0.5;
-    }
-
-    100% {
-        opacity: 1;
-    }
-
-}
-
-@keyframes text-appear {
-    0% {
-        opacity: 0;
-    }
-    50% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
-@keyframes reveal {
-    from {
-        height: 0;
-    }
-
-    to {
-        height: 100%;
-    }
-}
-
-@keyframes gradientLengthShift {
-    0% {
-        background: linear-gradient(180deg, #000 80%, #3b0997);
-    }
-
-    5% {
-        background: linear-gradient(180deg, #000 81%, #3b0997);
-    }
-
-    10% {
-        background: linear-gradient(180deg, #000 82%, #3b0997);
-    }
-
-    15% {
-        background: linear-gradient(180deg, #000 83%, #3b0997);
-    }
-
-    20% {
-        background: linear-gradient(180deg, #000 84%, #3b0997);
-    }
-
-    25% {
-        background: linear-gradient(180deg, #000 85%, #3b0997);
-    }
-
-    30% {
-        background: linear-gradient(180deg, #000 86%, #3b0997);
-    }
-
-    35% {
-        background: linear-gradient(180deg, #000 87%, #3b0997);
-    }
-
-    40% {
-        background: linear-gradient(180deg, #000 88%, #3b0997);
-    }
-
-    45% {
-        background: linear-gradient(180deg, #000 89%, #3b0997);
-    }
-
-    50% {
-        background: linear-gradient(180deg, #000 90%, #3b0997);
-    }
-
-    55% {
-        background: linear-gradient(180deg, #000 89%, #3b0997);
-    }
-
-    60% {
-        background: linear-gradient(180deg, #000 88%, #3b0997);
-    }
-
-    65% {
-        background: linear-gradient(180deg, #000 87%, #3b0997);
-    }
-
-    70% {
-        background: linear-gradient(180deg, #000 86%, #3b0997);
-    }
-
-    75% {
-        background: linear-gradient(180deg, #000 85%, #3b0997);
-    }
-
-    80% {
-        background: linear-gradient(180deg, #000 84%, #3b0997);
-    }
-
-    85% {
-        background: linear-gradient(180deg, #000 83%, #3b0997);
-    }
-
-    90% {
-        background: linear-gradient(180deg, #000 82%, #3b0997);
-    }
-
-    95% {
-        background: linear-gradient(180deg, #000 81%, #3b0997);
-    }
-
-    100% {
-        background: linear-gradient(180deg, #000 80%, #3b0997);
-    }
-}
-
-@keyframes typing {
-    from {
-        width:0
-    }
-}
-/* h1 {
-    animation: twinkle 1.5s infinite alternate;
-    color: #ff0000;
-} */
-
-@keyframes glow {
-    0% {
-        opacity: 1;
-        text-shadow: 0 0 4px #ff5c72, 0 0 8px #ff5c72, 0 0 12px #ff5c72, 0 0 16px #ff5c72;
-    }
-    33% {
-        opacity: 0.6;
-        text-shadow: 0 0 1px #ff5c72, 0 0 2px #ff5c72, 0 0 3px #ff5c72, 0 0 4px #ff5c72;
-    }
-    66% {
-        opacity: 1;
-        text-shadow: 0 0 4px #ff5c72, 0 0 8px #ff5c72, 0 0 12px #ff5c72, 0 0 16px #ff5c72;
-    }
-    100% {
-        opacity: 0.8;
-        text-shadow: 0 0 1px #ff5c72, 0 0 2px #ff5c72, 0 0 3px #ff5c72, 0 0 4px #ff5c72;
-    }
-}
-@keyframes bokehAnimation {
-    /* Starting position */
-    0% {
-        background:
-            radial-gradient(circle at 50% 10%, rgba(255, 0, 255, 0.5) 7px, transparent 70px),
-            radial-gradient(circle at 15% 20%, rgba(255, 0, 0, 0.5) 10px, transparent 100px),
-            radial-gradient(circle at 80% 30%, rgba(0, 0, 255, 0.5) 13px, transparent 130px),
-            radial-gradient(circle at 30% 40%, rgba(255, 0, 255, 0.5) 10px, transparent 100px),
-            radial-gradient(circle at 70% 50%, rgba(255, 0, 0, 0.5) 10px, transparent 100px),
-            radial-gradient(circle at 20% 60%, rgba(0, 0, 255, 0.5) 9px, transparent 90px),
-            radial-gradient(circle at 60% 68%, rgba(255, 0, 0, 0.5) 7px, transparent 70px),
-            radial-gradient(circle at 30% 82%, rgba(0, 0, 255, 0.5) 10px, transparent 100px),
-            radial-gradient(circle at 75% 85%, rgba(255, 0, 255, 0.5) 9px, transparent 90px),
-            #000;
-    }
-
-    /* Moving gradients slightly at each keyframe */
-    5% {
-        background:
-            radial-gradient(circle at 53% 13%, rgba(255, 0, 255, 0.5) 7px, transparent 70px),
-            radial-gradient(circle at 12% 17%, rgba(255, 0, 0, 0.5) 10px, transparent 100px),
-            radial-gradient(circle at 77% 27%, rgba(0, 0, 255, 0.5) 13px, transparent 130px),
-            radial-gradient(circle at 33% 43%, rgba(255, 0, 255, 0.5) 10px, transparent 100px),
-            radial-gradient(circle at 67% 53%, rgba(255, 0, 0, 0.5) 10px, transparent 100px),
-            radial-gradient(circle at 23% 57%, rgba(0, 0, 255, 0.5) 9px, transparent 90px),
-            radial-gradient(circle at 63% 71%, rgba(255, 0, 0, 0.5) 7px, transparent 70px),
-            radial-gradient(circle at 27% 85%, rgba(0, 0, 255, 0.5) 10px, transparent 100px),
-            radial-gradient(circle at 78% 82%, rgba(255, 0, 255, 0.5) 9px, transparent 90px),
-            #000;
-    }
-
-    10% {
-        background:
-            radial-gradient(circle at 56% 10%, rgba(255, 0, 255, 0.5) 7px, transparent 70px),
-            radial-gradient(circle at 15% 23%, rgba(255, 0, 0, 0.5) 10px, transparent 100px),
-            radial-gradient(circle at 80% 33%, rgba(0, 0, 255, 0.5) 13px, transparent 130px),
-            radial-gradient(circle at 27% 37%, rgba(255, 0, 255, 0.5) 10px, transparent 100px),
-            radial-gradient(circle at 73% 47%, rgba(255, 0, 0, 0.5) 10px, transparent 100px),
-            radial-gradient(circle at 17% 60%, rgba(0, 0, 255, 0.5) 9px, transparent 90px),
-            radial-gradient(circle at 60% 65%, rgba(255, 0, 0, 0.5) 7px, transparent 70px),
-            radial-gradient(circle at 33% 79%, rgba(0, 0, 255, 0.5) 10px, transparent 100px),
-            radial-gradient(circle at 72% 88%, rgba(255, 0, 255, 0.5) 9px, transparent 90px),
-            #000;
-    }
-
-    15% {
-        background:
-            radial-gradient(circle at 50% 13%, rgba(255, 0, 255, 0.5) 7px, transparent 70px),
-            radial-gradient(circle at 18% 17%, rgba(255, 0, 0, 0.5) 10px, transparent 100px),
-            radial-gradient(circle at 77% 30%, rgba(0, 0, 255, 0.5) 13px, transparent 130px),
-            radial-gradient(circle at 30% 43%, rgba(255, 0, 255, 0.5) 10px, transparent 100px),
-            radial-gradient(circle at 70% 53%, rgba(255, 0, 0, 0.5) 10px, transparent 100px),
-            radial-gradient(circle at 20% 57%, rgba(0, 0, 255, 0.5) 9px, transparent 90px),
-            radial-gradient(circle at 63% 68%, rgba(255, 0, 0, 0.5) 7px, transparent 70px),
-            radial-gradient(circle at 27% 82%, rgba(0, 0, 255, 0.5) 10px, transparent 100px),
-            radial-gradient(circle at 75% 85%, rgba(255, 0, 255, 0.5) 9px, transparent 90px),
-            #000;
-    }
-
-    20% {
-        background:
-            radial-gradient(circle at 53% 16%, rgba(255, 0, 255, 0.5) 7px, transparent 70px),
-            radial-gradient(circle at 12% 20%, rgba(255, 0, 0, 0.5) 10px, transparent 100px),
-            radial-gradient(circle at 83% 33%, rgba(0, 0, 255, 0.5) 13px, transparent 130px),
-            radial-gradient(circle at 27% 40%, rgba(255, 0, 255, 0.5) 10px, transparent 100px),
-            radial-gradient(circle at 67% 50%, rgba(255, 0, 0, 0.5) 10px, transparent 100px),
-            radial-gradient(circle at 23% 60%, rgba(0, 0, 255, 0.5) 9px, transparent 90px),
-            radial-gradient(circle at 60% 71%, rgba(255, 0, 0, 0.5) 7px, transparent 70px),
-            radial-gradient(circle at 30% 85%, rgba(0, 0, 255, 0.5) 10px, transparent 100px),
-            radial-gradient(circle at 78% 88%, rgba(255, 0, 255, 0.5) 9px, transparent 90px),
-            #000;
-    }
-
-    25% {
-        background:
-            radial-gradient(circle at 56% 19%, rgba(255, 0, 255, 0.5) 7px, transparent 70px),
-            radial-gradient(circle at 15% 23%, rgba(255, 0, 0, 0.5) 10px, transparent 100px),
-            radial-gradient(circle at 80% 36%, rgba(0, 0, 255, 0.5) 13px, transparent 130px),
-            radial-gradient(circle at 33% 37%, rgba(255, 0, 255, 0.5) 10px, transparent 100px),
-            radial-gradient(circle at 73% 47%, rgba(255, 0, 0, 0.5) 10px, transparent 100px),
-            radial-gradient(circle at 17% 63%, rgba(0, 0, 255, 0.5) 9px, transparent 90px),
-            radial-gradient(circle at 57% 65%, rgba(255, 0, 0, 0.5) 7px, transparent 70px),
-            radial-gradient(circle at 33% 79%, rgba(0, 0, 255, 0.5) 10px, transparent 100px),
-            radial-gradient(circle at 72% 82%, rgba(255, 0, 255, 0.5) 9px, transparent 90px),
-            #000;
-    }
-
-    30% {
-        background:
-            radial-gradient(circle at 50% 16%, rgba(255, 0, 255, 0.5) 7px, transparent 70px),
-            radial-gradient(circle at 18% 17%, rgba(255, 0, 0, 0.5) 10px, transparent 100px),
-            radial-gradient(circle at 77% 33%, rgba(0, 0, 255, 0.5) 13px, transparent 130px),
-            radial-gradient(circle at 30% 40%, rgba(255, 0, 255, 0.5) 10px, transparent 100px),
-            radial-gradient(circle at 70% 50%, rgba(255, 0, 0, 0.5) 10px, transparent 100px),
-            radial-gradient(circle at 20% 57%, rgba(0, 0, 255, 0.5) 9px, transparent 90px),
-            radial-gradient(circle at 63% 68%, rgba(255, 0, 0, 0.5) 7px, transparent 70px),
-            radial-gradient(circle at 27% 82%, rgba(0, 0, 255, 0.5) 10px, transparent 100px),
-            radial-gradient(circle at 75% 85%, rgba(255, 0, 255, 0.5) 9px, transparent 90px),
-            #000;
-    }
-
-    35% {
-        background:
-            radial-gradient(circle at 53% 13%, rgba(255, 0, 255, 0.5) 7px, transparent 70px),
-            radial-gradient(circle at 12% 20%, rgba(255, 0, 0, 0.5) 10px, transparent 100px),
-            radial-gradient(circle at 83% 30%, rgba(0, 0, 255, 0.5) 13px, transparent 130px),
-            radial-gradient(circle at 33% 43%, rgba(255, 0, 255, 0.5) 10px, transparent 100px),
-            radial-gradient(circle at 67% 53%, rgba(255, 0, 0, 0.5) 10px, transparent 100px),
-            radial-gradient(circle at 23% 60%, rgba(0, 0, 255, 0.5) 9px, transparent 90px),
-            radial-gradient(circle at 60% 71%, rgba(255, 0, 0, 0.5) 7px, transparent 70px),
-            radial-gradient(circle at 30% 85%, rgba(0, 0, 255, 0.5) 10px, transparent 100px),
-            radial-gradient(circle at 78% 82%, rgba(255, 0, 255, 0.5) 9px, transparent 90px),
-            #000;
-    }
-
-    40% {
-        background:
-            radial-gradient(circle at 56% 10%, rgba(255, 0, 255, 0.5) 7px, transparent 70px),
-            radial-gradient(circle at 15% 23%, rgba(255, 0, 0, 0.5) 10px, transparent 100px),
-            radial-gradient(circle at 80% 27%, rgba(0, 0, 255, 0.5) 13px, transparent 130px),
-            radial-gradient(circle at 27% 37%, rgba(255, 0, 255, 0.5) 10px, transparent 100px),
-            radial-gradient(circle at 73% 47%, rgba(255, 0, 0, 0.5) 10px, transparent 100px),
-            radial-gradient(circle at 17% 63%, rgba(0, 0, 255, 0.5) 9px, transparent 90px),
-            radial-gradient(circle at 57% 65%, rgba(255, 0, 0, 0.5) 7px, transparent 70px),
-            radial-gradient(circle at 33% 79%, rgba(0, 0, 255, 0.5) 10px, transparent 100px),
-            radial-gradient(circle at 72% 88%, rgba(255, 0, 255, 0.5) 9px, transparent 90px),
-            #000;
-    }
-
-    45% {
-        background:
-            radial-gradient(circle at 50% 13%, rgba(255, 0, 255, 0.5) 7px, transparent 70px),
-            radial-gradient(circle at 18% 17%, rgba(255, 0, 0, 0.5) 10px, transparent 100px),
-            radial-gradient(circle at 77% 30%, rgba(0, 0, 255, 0.5) 13px, transparent 130px),
-            radial-gradient(circle at 30% 40%, rgba(255, 0, 255, 0.5) 10px, transparent 100px),
-            radial-gradient(circle at 70% 53%, rgba(255, 0, 0, 0.5) 10px, transparent 100px),
-            radial-gradient(circle at 20% 57%, rgba(0, 0, 255, 0.5) 9px, transparent 90px),
-            radial-gradient(circle at 63% 68%, rgba(255, 0, 0, 0.5) 7px, transparent 70px),
-            radial-gradient(circle at 27% 82%, rgba(0, 0, 255, 0.5) 10px, transparent 100px),
-            radial-gradient(circle at 75% 85%, rgba(255, 0, 255, 0.5) 9px, transparent 90px),
-            #000;
-    }
-
-    50% {
-        background:
-            radial-gradient(circle at 53% 16%, rgba(255, 0, 255, 0.5) 7px, transparent 70px),
-            radial-gradient(circle at 12% 20%, rgba(255, 0, 0, 0.5) 10px, transparent 100px),
-            radial-gradient(circle at 80% 33%, rgba(0, 0, 255, 0.5) 13px, transparent 130px),
-            radial-gradient(circle at 33% 43%, rgba(255, 0, 255, 0.5) 10px, transparent 100px),
-            radial-gradient(circle at 73% 50%, rgba(255, 0, 0, 0.5) 10px, transparent 100px),
-            radial-gradient(circle at 23% 60%, rgba(0, 0, 255, 0.5) 9px, transparent 90px),
-            radial-gradient(circle at 60% 71%, rgba(255, 0, 0, 0.5) 7px, transparent 70px),
-            radial-gradient(circle at 30% 85%, rgba(0, 0, 255, 0.5) 10px, transparent 100px),
-            radial-gradient(circle at 78% 88%, rgba(255, 0, 255, 0.5) 9px, transparent 90px),
-            #000;
-    }
-
-    /* Begin reversing the path */
-    55% {
-        background:
-            radial-gradient(circle at 50% 13%, rgba(255, 0, 255, 0.5) 7px, transparent 70px),
-            radial-gradient(circle at 18% 17%, rgba(255, 0, 0, 0.5) 10px, transparent 100px),
-            radial-gradient(circle at 77% 30%, rgba(0, 0, 255, 0.5) 13px, transparent 130px),
-            radial-gradient(circle at 30% 40%, rgba(255, 0, 255, 0.5) 10px, transparent 100px),
-            radial-gradient(circle at 70% 53%, rgba(255, 0, 0, 0.5) 10px, transparent 100px),
-            radial-gradient(circle at 20% 57%, rgba(0, 0, 255, 0.5) 9px, transparent 90px),
-            radial-gradient(circle at 63% 68%, rgba(255, 0, 0, 0.5) 7px, transparent 70px),
-            radial-gradient(circle at 27% 82%, rgba(0, 0, 255, 0.5) 10px, transparent 100px),
-            radial-gradient(circle at 75% 85%, rgba(255, 0, 255, 0.5) 9px, transparent 90px),
-            #000;
-    }
-    60% {
-        background:
-            radial-gradient(circle at 56% 10%, rgba(255, 0, 255, 0.5) 7px, transparent 70px),
-            radial-gradient(circle at 15% 23%, rgba(255, 0, 0, 0.5) 10px, transparent 100px),
-            radial-gradient(circle at 80% 27%, rgba(0, 0, 255, 0.5) 13px, transparent 130px),
-            radial-gradient(circle at 27% 37%, rgba(255, 0, 255, 0.5) 10px, transparent 100px),
-            radial-gradient(circle at 73% 47%, rgba(255, 0, 0, 0.5) 10px, transparent 100px),
-            radial-gradient(circle at 17% 63%, rgba(0, 0, 255, 0.5) 9px, transparent 90px),
-            radial-gradient(circle at 57% 65%, rgba(255, 0, 0, 0.5) 7px, transparent 70px),
-            radial-gradient(circle at 33% 79%, rgba(0, 0, 255, 0.5) 10px, transparent 100px),
-            radial-gradient(circle at 72% 88%, rgba(255, 0, 255, 0.5) 9px, transparent 90px),
-            #000;
-    }
-    75% {
-        background:
-            radial-gradient(circle at 53% 13%, rgba(255, 0, 255, 0.5) 7px, transparent 70px),
-            radial-gradient(circle at 12% 20%, rgba(255, 0, 0, 0.5) 10px, transparent 100px),
-            radial-gradient(circle at 83% 30%, rgba(0, 0, 255, 0.5) 13px, transparent 130px),
-            radial-gradient(circle at 33% 43%, rgba(255, 0, 255, 0.5) 10px, transparent 100px),
-            radial-gradient(circle at 67% 53%, rgba(255, 0, 0, 0.5) 10px, transparent 100px),
-            radial-gradient(circle at 23% 60%, rgba(0, 0, 255, 0.5) 9px, transparent 90px),
-            radial-gradient(circle at 60% 71%, rgba(255, 0, 0, 0.5) 7px, transparent 70px),
-            radial-gradient(circle at 30% 85%, rgba(0, 0, 255, 0.5) 10px, transparent 100px),
-            radial-gradient(circle at 78% 82%, rgba(255, 0, 255, 0.5) 9px, transparent 90px),
-            #000;
-    }
-    70% {
-        background:
-            radial-gradient(circle at 50% 16%, rgba(255, 0, 255, 0.5) 7px, transparent 70px),
-            radial-gradient(circle at 18% 17%, rgba(255, 0, 0, 0.5) 10px, transparent 100px),
-            radial-gradient(circle at 77% 33%, rgba(0, 0, 255, 0.5) 13px, transparent 130px),
-            radial-gradient(circle at 30% 40%, rgba(255, 0, 255, 0.5) 10px, transparent 100px),
-            radial-gradient(circle at 70% 50%, rgba(255, 0, 0, 0.5) 10px, transparent 100px),
-            radial-gradient(circle at 20% 57%, rgba(0, 0, 255, 0.5) 9px, transparent 90px),
-            radial-gradient(circle at 63% 68%, rgba(255, 0, 0, 0.5) 7px, transparent 70px),
-            radial-gradient(circle at 27% 82%, rgba(0, 0, 255, 0.5) 10px, transparent 100px),
-            radial-gradient(circle at 75% 85%, rgba(255, 0, 255, 0.5) 9px, transparent 90px),
-            #000;
-    }
-    75% {
-        background:
-            radial-gradient(circle at 56% 19%, rgba(255, 0, 255, 0.5) 7px, transparent 70px),
-            radial-gradient(circle at 15% 23%, rgba(255, 0, 0, 0.5) 10px, transparent 100px),
-            radial-gradient(circle at 80% 36%, rgba(0, 0, 255, 0.5) 13px, transparent 130px),
-            radial-gradient(circle at 33% 37%, rgba(255, 0, 255, 0.5) 10px, transparent 100px),
-            radial-gradient(circle at 73% 47%, rgba(255, 0, 0, 0.5) 10px, transparent 100px),
-            radial-gradient(circle at 17% 63%, rgba(0, 0, 255, 0.5) 9px, transparent 90px),
-            radial-gradient(circle at 57% 65%, rgba(255, 0, 0, 0.5) 7px, transparent 70px),
-            radial-gradient(circle at 33% 79%, rgba(0, 0, 255, 0.5) 10px, transparent 100px),
-            radial-gradient(circle at 72% 82%, rgba(255, 0, 255, 0.5) 9px, transparent 90px),
-            #000;
-    }
-    80% {
-        background:
-            radial-gradient(circle at 53% 16%, rgba(255, 0, 255, 0.5) 7px, transparent 70px),
-            radial-gradient(circle at 12% 20%, rgba(255, 0, 0, 0.5) 10px, transparent 100px),
-            radial-gradient(circle at 83% 33%, rgba(0, 0, 255, 0.5) 13px, transparent 130px),
-            radial-gradient(circle at 27% 40%, rgba(255, 0, 255, 0.5) 10px, transparent 100px),
-            radial-gradient(circle at 67% 50%, rgba(255, 0, 0, 0.5) 10px, transparent 100px),
-            radial-gradient(circle at 23% 60%, rgba(0, 0, 255, 0.5) 9px, transparent 90px),
-            radial-gradient(circle at 60% 71%, rgba(255, 0, 0, 0.5) 7px, transparent 70px),
-            radial-gradient(circle at 30% 85%, rgba(0, 0, 255, 0.5) 10px, transparent 100px),
-            radial-gradient(circle at 78% 88%, rgba(255, 0, 255, 0.5) 9px, transparent 90px),
-            #000;
-    }
-    85% {
-        background:
-            radial-gradient(circle at 50% 13%, rgba(255, 0, 255, 0.5) 7px, transparent 70px),
-            radial-gradient(circle at 18% 17%, rgba(255, 0, 0, 0.5) 10px, transparent 100px),
-            radial-gradient(circle at 77% 30%, rgba(0, 0, 255, 0.5) 13px, transparent 130px),
-            radial-gradient(circle at 30% 43%, rgba(255, 0, 255, 0.5) 10px, transparent 100px),
-            radial-gradient(circle at 70% 53%, rgba(255, 0, 0, 0.5) 10px, transparent 100px),
-            radial-gradient(circle at 20% 57%, rgba(0, 0, 255, 0.5) 9px, transparent 90px),
-            radial-gradient(circle at 63% 68%, rgba(255, 0, 0, 0.5) 7px, transparent 70px),
-            radial-gradient(circle at 27% 82%, rgba(0, 0, 255, 0.5) 10px, transparent 100px),
-            radial-gradient(circle at 75% 85%, rgba(255, 0, 255, 0.5) 9px, transparent 90px),
-            #000;
-    }
-    90% {
-        background:
-            radial-gradient(circle at 56% 10%, rgba(255, 0, 255, 0.5) 7px, transparent 70px),
-            radial-gradient(circle at 15% 23%, rgba(255, 0, 0, 0.5) 10px, transparent 100px),
-            radial-gradient(circle at 80% 33%, rgba(0, 0, 255, 0.5) 13px, transparent 130px),
-            radial-gradient(circle at 27% 37%, rgba(255, 0, 255, 0.5) 10px, transparent 100px),
-            radial-gradient(circle at 73% 47%, rgba(255, 0, 0, 0.5) 10px, transparent 100px),
-            radial-gradient(circle at 17% 60%, rgba(0, 0, 255, 0.5) 9px, transparent 90px),
-            radial-gradient(circle at 60% 65%, rgba(255, 0, 0, 0.5) 7px, transparent 70px),
-            radial-gradient(circle at 33% 79%, rgba(0, 0, 255, 0.5) 10px, transparent 100px),
-            radial-gradient(circle at 72% 88%, rgba(255, 0, 255, 0.5) 9px, transparent 90px),
-            #000;
-    }
-    95% {
-            background:
-                radial-gradient(circle at 53% 13%, rgba(255, 0, 255, 0.5) 7px, transparent 70px),
-                radial-gradient(circle at 12% 17%, rgba(255, 0, 0, 0.5) 10px, transparent 100px),
-                radial-gradient(circle at 77% 27%, rgba(0, 0, 255, 0.5) 13px, transparent 130px),
-                radial-gradient(circle at 33% 43%, rgba(255, 0, 255, 0.5) 10px, transparent 100px),
-                radial-gradient(circle at 67% 53%, rgba(255, 0, 0, 0.5) 10px, transparent 100px),
-                radial-gradient(circle at 23% 57%, rgba(0, 0, 255, 0.5) 9px, transparent 90px),
-                radial-gradient(circle at 63% 71%, rgba(255, 0, 0, 0.5) 7px, transparent 70px),
-                radial-gradient(circle at 27% 85%, rgba(0, 0, 255, 0.5) 10px, transparent 100px),
-                radial-gradient(circle at 78% 82%, rgba(255, 0, 255, 0.5) 9px, transparent 90px),
-                #000;
-    }
-    100% {
-        background:
-            radial-gradient(circle at 50% 10%, rgba(255, 0, 255, 0.5) 7px, transparent 70px),
-            radial-gradient(circle at 15% 20%, rgba(255, 0, 0, 0.5) 10px, transparent 100px),
-            radial-gradient(circle at 80% 30%, rgba(0, 0, 255, 0.5) 13px, transparent 130px),
-            radial-gradient(circle at 30% 40%, rgba(255, 0, 255, 0.5) 10px, transparent 100px),
-            radial-gradient(circle at 70% 50%, rgba(255, 0, 0, 0.5) 10px, transparent 100px),
-            radial-gradient(circle at 20% 60%, rgba(0, 0, 255, 0.5) 9px, transparent 90px),
-            radial-gradient(circle at 60% 68%, rgba(255, 0, 0, 0.5) 7px, transparent 70px),
-            radial-gradient(circle at 30% 82%, rgba(0, 0, 255, 0.5) 10px, transparent 100px),
-            radial-gradient(circle at 75% 85%, rgba(255, 0, 255, 0.5) 9px, transparent 90px),
-            #000;
-    }
-}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Italianno&family=Satisfy&display=swap"
+        rel="stylesheet">
+    <title>Happy Birthday</title>
+</head>
+
+<body>
+    <div class="page-wrapper">
+        <div class="letter snap">
+            <div class="header">
+                <h1>Sharvari Molke</h1>
+                <h6>15 February, 2025</h6>
+            </div>
+            <div class="letter-main">
+                <p class="animated-text-1">Dear Soulmate,</p>
+                <p class="animated-text-2">First of all, A very happy birthday to you. Look at you, you pretty girl! You turned 18. I know the journey has been crazy till now and I am happy that we are still a part of each other. This makes me realize how fast we are growing up and how far we have come. I feel grateful to be designated as your Best Friend.</p>
+                <p class="animated-text-3">Isn't it funny how it started and how we ended up together. It is all like as if we were destined to meet and progress together in the ups and downs of our life. I know there are more things that are yet to come and I am sure that we will face them fearlessly.</p>
+                <p class="animated-text-4">Despite being quite the opposite of one another, we still managed to get along a lot of times, It is understandable that our thoughts and perspectives might not match all the time, sometimes we will argue, sometimes we will fight, sometimes we will completely distance from each other, but speed-breakers on the roads are for our own safety, right? Everything can't be so fast and so smooth, Right? If we don't manage properly we might get into a devastating accident, Right? These small clashes are something that makes our bond grow more. “True love flourishes endlessly when nurtured with care; it never fades.”
+                </p>
+                <p class="animated-text-5">Since we are in the initial phases of our careers, we might not be as consistent in communicating as we were some years ago, and I am sure that it won't affect us either. Because we know how valuable it is to progress in life. How important it is to not just survive but enjoy our lives to the fullest.</p>
+                <p class="animated-text-6">I had said it once, but it was in another context, today I will say it again but it will be in another: “I WISH MYSELF TO BE YOUR LIFETIME MUSIC”</p>
+            </div>
+        </div>
+        <div class="memories snap">
+            <div class="slide-container">
+                <div class="slider">
+                    <img id="slide-1" src="slides/slide1.png" alt="Smile, Because You Are Beautiful..." />
+                    <img id="slide-2" src="slides/slide2.jpg" alt="Shine, Because You Are Meant To Stand Out..." />
+                    <img id="slide-3" src="slides/slide3.jpg" alt="Strive, Because Your Dreams Are Worth It..." />
+                </div>
+            </div>
+        </div>
+        <div class="quotes snap">
+            <div class="quotes-header">
+                <h1>Some Quotes For You</h1>
+            </div>
+            <div class="quotes-wrapper">
+                <div class="quote-1 quote">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nihil quam totam placeat quis
+                        beatae impedit dolor illum cum aliquam.</p>
+                </div>
+                <div class="quote-2 quote">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum quis accusamus delectus ea
+                        eos repudiandae voluptates odio fugit sequi libero fuga, itaque maiores culpa suscipit et
+                        architecto cupiditate incidunt numquam! Reficia ad natus quia.</p>
+                </div>
+                <div class="quote-3 quote">
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut adipisci similique aliquid iure
+                        accusantium, tempore repellat laboriosam vitae blanditiis culpa dolor! Dolores dolor distinctio
+                        nihil, voluptate suscipit repellendus.</p>
+                </div>
+                <div class="quote-4 quote">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi corrupti temporibus sequi nemo
+                        eveniet, asperiores sunt quasi odio omnis harum quas dicta!</p>
+                </div>
+                <div class="quote-5 quote">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt hic minima repudiandae placeat
+                        necessitatibus, aspernatur molestias quis laboriosam sit autem nam fugiat perferendis! Eveniet,
+                        ipsam sed dolorum omnis voluptatibus id?</p>
+                </div>
+            </div>
+        </div>
+        <div class="end-note snap">
+            <div class="video-message">
+                <video src="images/video.mp4" poster="/Personal Projects/Happy Birthday/images/thumbnail.jpg" controls preload="none"></video>
+            </div>
+            <div class="end-note-text">
+                <h2>An End Note</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias quas dignissimos libero optio vero,
+                    quos
+                    consectetur natus fuga? Repellat laudantium, laboriosam optio sed voluptates corrupti doloremque
+                    voluptatem dignissimos. Harum quas architecto ad similique aspernatur magni provident numquam. Illo
+                    expedita provident soluta magni ad consequuntur porro excepturi dolor sapiente, odit ratione
+                    tenetur,
+                    laudantium distinctio illum cupiditate, obcaecati et quod ipsum atque aspernatur quam eligendi sed
+                    esse?
+                    Dolorem recusandae a nostrum nulla!</p>
+            </div>
+            <div class="bucket-list">
+                <h2>A Small bucket List</h2>
+                <div class="bucket-line-1">
+                    <div class="bl1 blue-bl">
+                        <p>Start a Business Together</p>
+                    </div>
+                    <div class="bl2 pink-bl">
+                        <p>Do a cooking competetion</p>
+                    </div>
+                    <div class="bl3 blue-bl">
+                        <p>Go on a road trip with no set destination</p>
+                    </div>
+                    <div class="bl4 pink-bl">
+                        <p>Make our Goa trip a reality</p>
+                    </div>
+                </div>
+                <div class="bucket-line-2">
+                    <div class="bl5 pink-bl">
+                        <p>Start and manage a YouTube channel together</p>
+                    </div>
+                    <div class="bl6 blue-bl">
+                        <p>Attend a music festival
+                        </p>
+                    </div>
+                    <div class="bl7 pink-bl">
+                        <p>Take a long walk at night and talk about everything</p>
+                    </div>
+                </div>
+                <div class="bucket-line-3">
+                    <div class="bl8 blue-bl">
+                        <p>Take the best photographs</p>
+                    </div>
+                    <div class="bl9 pink-bl">
+                        <p>Watch a movie in theatre</p>
+                    </div>
+                    <div class="bl10 blue-bl">
+                        <p>Go stargazing together</p>
+                    </div>
+                    <div class="bl11 pink-bl">
+                        <p>Painting on a same canvas with nothing in mind</p>
+                    </div>
+                </div>
+                <div class="bucket-line-4">
+                    <div class="bl12 pink-bl">
+                        <p>Have some weird selfies together</p>
+                    </div>
+                    <div class="bl13 blue-bl">
+                        <p>Try so many different foods</p>
+                    </div>
+                    <div class="bl14 pink-bl">
+                        <p>Make a video together talking about our goals</p>
+                    </div>
+                </div>
+                <div class="bucket-line-5">
+                    <div class="bl15 blue-bl">
+                        <p>Compete over who can make the best sand castles</p>
+                    </div>
+                    <div class="bl16 pink-bl">
+                        <p>Do makeup on me</p>
+                    </div>
+                    <div class="bl17 blue-bl">
+                        <p>Make our signature handshake that only we two know</p>
+                    </div>
+                    <div class="bl8 pink-bl">
+                        <p>Make stories about random people in a cafe</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer">
+                <p class="craft-space-top">Crafted with ❤️ by</p>
+                <p class="craft-space-bottom">Akhilesh Krishnramila</p>
+                <p class="notice">This is a smartphone(20:9)-specific website, it may break on other devices</p>
+            </div>
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+
+</html>
